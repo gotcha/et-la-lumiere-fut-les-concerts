@@ -1,0 +1,5 @@
+.DS_Store
+.devenv.flake.nix
+.devenv/
+.envrc
+assets/
