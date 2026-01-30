@@ -182,15 +182,25 @@
             gap: 2rem;
         }
 
+        .concert-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
         .concert-card {
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        .concert-card:hover {
+        .concert-card-link:hover .concert-card {
             transform: translateY(-8px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
@@ -512,43 +522,49 @@
                 <h3>Nos Concerts</h3>
                 <div class="concerts-grid">
                     <!-- Marloie Concert -->
-                    <div class="concert-card">
-                        <img src="images/concert-marloie.jpg" alt="Concert Marloie" class="concert-image">
-                        <div class="concert-content">
-                            <h4 class="concert-title">À Marloie</h4>
-                            <p class="concert-location">📍 Église Saint-Georges</p>
-                            <p class="concert-date">📅 Samedi 21 mars 2026</p>
-                            <p class="concert-time">🕐 20h00</p>
-                            <p class="concert-description">Marche-en-Famenne | Rue de la Station, 6900</p>
-                            <a href="marloie.html" class="concert-link">Découvrir</a>
+                    <a href="marloie.html" class="concert-card-link">
+                        <div class="concert-card">
+                            <img src="images/concert-marloie.jpg" alt="Concert Marloie" class="concert-image">
+                            <div class="concert-content">
+                                <h4 class="concert-title">À Marloie</h4>
+                                <p class="concert-location">📍 Église Saint-Georges</p>
+                                <p class="concert-date">📅 Samedi 21 mars 2026</p>
+                                <p class="concert-time">🕐 20h00</p>
+                                <p class="concert-description">Marche-en-Famenne | Rue de la Station, 6900</p>
+                                <span class="concert-link">Découvrir</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Evere Concert -->
-                    <div class="concert-card">
-                        <img src="images/concert-evere.jpg" alt="Concert Evere" class="concert-image">
-                        <div class="concert-content">
-                            <h4 class="concert-title">À Evere</h4>
-                            <p class="concert-location">📍 Église Saint-Joseph</p>
-                            <p class="concert-date">📅 Dimanche 22 mars 2026</p>
-                            <p class="concert-time">🕐 17h00</p>
-                            <p class="concert-description">Evere | Place Jean de Paduwa, 1140</p>
-                            <a href="evere.html" class="concert-link">Découvrir</a>
+                    <a href="evere.html" class="concert-card-link">
+                        <div class="concert-card">
+                            <img src="images/concert-evere.jpg" alt="Concert Evere" class="concert-image">
+                            <div class="concert-content">
+                                <h4 class="concert-title">À Evere</h4>
+                                <p class="concert-location">📍 Église Saint-Joseph</p>
+                                <p class="concert-date">📅 Dimanche 22 mars 2026</p>
+                                <p class="concert-time">🕐 17h00</p>
+                                <p class="concert-description">Evere | Place Jean de Paduwa, 1140</p>
+                                <span class="concert-link">Découvrir</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Malonne Concert -->
-                    <div class="concert-card">
-                        <img src="images/concert-malonne.jpg" alt="Concert Malonne" class="concert-image">
-                        <div class="concert-content">
-                            <h4 class="concert-title">À Malonne</h4>
-                            <p class="concert-location">📍 Chapelle Saint-Berthuin</p>
-                            <p class="concert-date">📅 Vendredi 27 mars 2026</p>
-                            <p class="concert-time">🕐 20h00</p>
-                            <p class="concert-description">Malonne | Fond de Malonne 129, 5020</p>
-                            <a href="malonne.html" class="concert-link">Découvrir</a>
+                    <a href="malonne.html" class="concert-card-link">
+                        <div class="concert-card">
+                            <img src="images/concert-malonne.jpg" alt="Concert Malonne" class="concert-image">
+                            <div class="concert-content">
+                                <h4 class="concert-title">À Malonne</h4>
+                                <p class="concert-location">📍 Chapelle Saint-Berthuin</p>
+                                <p class="concert-date">📅 Vendredi 27 mars 2026</p>
+                                <p class="concert-time">🕐 20h00</p>
+                                <p class="concert-description">Malonne | Fond de Malonne 129, 5020</p>
+                                <span class="concert-link">Découvrir</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </section>
 
