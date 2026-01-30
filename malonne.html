@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terpsichore - Et la lumière fut ! Un programme baroque en trois actes : Vie, Mort et Résurrection. Trois concerts en Belgique.">
-    <title>Terpsichore - Et la lumière fut !</title>
+    <meta name="description" content="Et la lumière fut ! - Concert Baroque à Malonne. Ensemble Chrysalis, Mathilde Sevrin, Samuel Namotte et Choeur Terpsichore.">
+    <title>Et la lumière fut ! ... à Malonne - Terpsichore</title>
     <style>
         * {
             margin: 0;
@@ -62,11 +62,11 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8)), 
-                        url('assets/affiche.jpg') center/cover;
+                        url('assets/concert-malonne.jpg') center/cover;
             color: white;
-            padding: 8rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
-            min-height: 600px;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -74,16 +74,10 @@
         }
 
         .hero h2 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .hero .genre {
@@ -96,8 +90,8 @@
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 0 auto 2rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
@@ -114,170 +108,109 @@
             padding: 3rem 0;
         }
 
-        /* About Section */
-        .about-section {
+        /* Description Section */
+        .description-section {
             margin-bottom: 4rem;
         }
 
-        .about-section h3 {
-            font-size: 2.5rem;
+        .description-section h3 {
+            font-size: 2rem;
             margin-bottom: 2rem;
             color: #1a1a2e;
             border-bottom: 3px solid darkgoldenrod;
             padding-bottom: 1rem;
-            text-align: center;
         }
 
-        .about-content {
+        .description-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            align-items: center;
-            margin-bottom: 3rem;
+            align-items: start;
         }
 
-        .about-text {
+        .description-text {
             line-height: 1.8;
         }
 
-        .about-text p {
+        .description-text p {
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-style: italic;
             color: #555;
         }
 
-        .about-text em {
-            color: #1a1a2e;
-            font-style: italic;
+        .description-text p:last-child {
+            font-style: normal;
+            color: #333;
         }
 
-        .about-image {
+        .description-image {
             text-align: center;
         }
 
-        .about-image img {
+        .description-image img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        /* Concerts Section */
-        .concerts-section {
-            margin: 4rem 0;
+        .description-image img:hover {
+            transform: scale(1.02);
         }
 
-        .concerts-section h3 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1a1a2e;
-            border-bottom: 3px solid darkgoldenrod;
-            padding-bottom: 1rem;
-            text-align: center;
-        }
-
-        .concerts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .concert-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .concert-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .concert-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .concert-content {
-            padding: 2rem;
-        }
-
-        .concert-title {
-            font-size: 1.5rem;
-            color: #1a1a2e;
-            margin-bottom: 0.5rem;
-        }
-
-        .concert-location {
-            color: darkgoldenrod;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .concert-date {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            color: #666;
-        }
-
-        .concert-time {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .concert-description {
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .concert-link {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: linear-gradient(135deg, darkgoldenrod 0%, #b8860b 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            width: 100%;
-            text-align: center;
-        }
-
-        .concert-link:hover {
-            background: linear-gradient(135deg, #b8860b 0%, darkgoldenrod 100%);
-            box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
-        }
-
-        /* Artists Section */
-        .artists-section {
+        /* Event Details Section */
+        .event-details {
             background: #f5f5f5;
             padding: 3rem 0;
-            margin: 4rem 0;
+            margin: 3rem 0;
             border-top: 2px solid darkgoldenrod;
             border-bottom: 2px solid darkgoldenrod;
         }
 
-        .artists-section h3 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1a1a2e;
-            text-align: center;
-        }
-
-        .artists-grid {
+        .details-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .detail-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid darkgoldenrod;
+        }
+
+        .detail-card h4 {
+            color: darkgoldenrod;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .detail-card p {
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* Artists Section */
+        .artists-section {
+            margin: 4rem 0;
+        }
+
+        .artists-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+            border-bottom: 3px solid darkgoldenrod;
+            padding-bottom: 1rem;
+        }
+
+        .artists-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -287,7 +220,6 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
         }
 
         .artist-card:hover {
@@ -297,14 +229,51 @@
 
         .artist-card h4 {
             color: darkgoldenrod;
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
 
         .artist-card p {
             color: #666;
             font-style: italic;
-            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, darkgoldenrod 0%, #b8860b 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: darkgoldenrod;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
         }
 
         /* Footer */
@@ -413,48 +382,25 @@
                 border-bottom: none;
             }
 
-            .hero {
-                padding: 4rem 2rem;
-                min-height: 400px;
-            }
-
             .hero h2 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
-            .hero .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .hero .genre {
-                font-size: 1rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .about-content {
+            .description-grid {
                 grid-template-columns: 1fr;
             }
 
-            .concerts-grid {
+            .details-grid {
                 grid-template-columns: 1fr;
             }
 
-            .artists-grid {
+            .artists-list {
                 grid-template-columns: 1fr;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
-            }
-
-            .about-section h3,
-            .concerts-section h3,
-            .artists-section h3 {
-                font-size: 1.8rem;
             }
         }
     </style>
@@ -470,8 +416,8 @@
                 <span></span>
             </div>
             <ul id="navMenu">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#concerts">Concerts</a></li>
+                <li><a href="#description">À propos</a></li>
+                <li><a href="#details">Infos Pratiques</a></li>
                 <li><a href="#artists">Artistes</a></li>
             </ul>
         </nav>
@@ -481,72 +427,46 @@
     <section class="hero">
         <p class="genre">Musique Baroque</p>
         <h2>Et la lumière fut !</h2>
-        <p class="subtitle">Un voyage musical à travers trois actes : Vie, Mort et Résurrection</p>
-        <p>Ensemble Chrysalis | Choeur Terpsichore | Trois concerts en Belgique</p>
+        <p>Un voyage musical à travers trois actes : Vie, Mort et Résurrection</p>
     </section>
 
     <!-- Main Content -->
     <main>
         <div class="container">
-            <!-- About Section -->
-            <section id="about" class="about-section">
-                <h3>À Propos du Concert</h3>
-                <div class="about-content">
-                    <div class="about-text">
+            <!-- Description Section -->
+            <section id="description" class="description-section">
+                <h3>Le Concert</h3>
+                <div class="description-grid">
+                    <div class="description-text">
                         <p><em>« Et la lumière fut ! », un programme dont la narration dramatique s'articule en trois actes : Vie, Mort et Résurrection.</em></p>
                         
                         <p><em>« Et la lumière fut ! », la contagion des œuvres de Schütz, Buxtehude ou Biber par l'esthétique baroque naissante initiée par Monteverdi.</em></p>
                         
                         <p><em>« Et la lumière fut ! », la projection de visuels conçus pour renforcer le narratif musical.</em></p>
                         
-                        <p>Le programme musical proposé par l'Ensemble Chrysalis, accompagné par Mathilde Sevrin (soprano) et le Choeur Terpsichore sous la direction de Xavier Haag, nous conduit de l'exubérance au vide abyssal, de la profusion à la désolation, aux lamentations, pour nous ramener ensuite avec espoir vers la confiance et la joie.</p>
+                        <p>Le programme musical proposé par l'Ensemble Chrysalis, accompagné par Mathilde Sevrin (soprano), Samuel Namotte (basse) et le choeur Terpsichore sous la direction de Xavier Haag, nous conduit de l'exubérance au vide abyssal, de la profusion à la désolation, aux lamentations, pour nous ramener ensuite avec espoir vers la confiance et la joie.</p>
                     </div>
-                    <div class="about-image">
-                        <img src="assets/photo-sans-lieux.jpg" alt="Ensemble Chrysalis">
+                    <div class="description-image">
+                        <img src="assets/concert-malonne.jpg" alt="Concert Malonne">
                     </div>
                 </div>
             </section>
 
-            <!-- Concerts Section -->
-            <section id="concerts" class="concerts-section">
-                <h3>Nos Concerts</h3>
-                <div class="concerts-grid">
-                    <!-- Marloie Concert -->
-                    <div class="concert-card">
-                        <img src="assets/concert-marloie.jpg" alt="Concert Marloie" class="concert-image">
-                        <div class="concert-content">
-                            <h4 class="concert-title">À Marloie</h4>
-                            <p class="concert-location">📍 Église Saint-Georges</p>
-                            <p class="concert-date">📅 Samedi 21 mars 2026</p>
-                            <p class="concert-time">🕐 20h00</p>
-                            <p class="concert-description">Marche-en-Famenne | Rue de la Station, 6900</p>
-                            <a href="marloie.html" class="concert-link">Découvrir</a>
+            <!-- Event Details Section -->
+            <section id="details" class="event-details">
+                <div class="container">
+                    <div class="details-grid">
+                        <div class="detail-card">
+                            <h4>📅 Date & Heure</h4>
+                            <p>Vendredi 27 mars 2026<br>à 20h00</p>
                         </div>
-                    </div>
-
-                    <!-- Evere Concert -->
-                    <div class="concert-card">
-                        <img src="assets/concert-evere.jpg" alt="Concert Evere" class="concert-image">
-                        <div class="concert-content">
-                            <h4 class="concert-title">À Evere</h4>
-                            <p class="concert-location">📍 Église Saint-Joseph</p>
-                            <p class="concert-date">📅 Dimanche 22 mars 2026</p>
-                            <p class="concert-time">🕐 17h00</p>
-                            <p class="concert-description">Evere | Place Jean de Paduwa, 1140</p>
-                            <a href="evere.html" class="concert-link">Découvrir</a>
+                        <div class="detail-card">
+                            <h4>📍 Lieu</h4>
+                            <p>Chapelle Saint-Berthuin<br>Fond de Malonne 129<br>5020 Malonne</p>
                         </div>
-                    </div>
-
-                    <!-- Malonne Concert -->
-                    <div class="concert-card">
-                        <img src="assets/concert-malonne.jpg" alt="Concert Malonne" class="concert-image">
-                        <div class="concert-content">
-                            <h4 class="concert-title">À Malonne</h4>
-                            <p class="concert-location">📍 Chapelle Saint-Berthuin</p>
-                            <p class="concert-date">📅 Vendredi 27 mars 2026</p>
-                            <p class="concert-time">🕐 20h00</p>
-                            <p class="concert-description">Malonne | Fond de Malonne 129, 5020</p>
-                            <a href="malonne.html" class="concert-link">Découvrir</a>
+                        <div class="detail-card">
+                            <h4>🎭 Genre</h4>
+                            <p>Musique Baroque</p>
                         </div>
                     </div>
                 </div>
@@ -554,27 +474,32 @@
 
             <!-- Artists Section -->
             <section id="artists" class="artists-section">
-                <div class="container">
-                    <h3>Les Artistes</h3>
-                    <div class="artists-grid">
-                        <div class="artist-card">
-                            <h4>Ensemble Chrysalis</h4>
-                            <p>Formation musicale baroque mettant en avant les textures riches de la musique de la Renaissance tardive et du Baroque précoce</p>
-                        </div>
-                        <div class="artist-card">
-                            <h4>Mathilde Sevrin</h4>
-                            <p>Soprano accompagnant le répertoire baroque avec une voix cristalline et expressive</p>
-                        </div>
-                        <div class="artist-card">
-                            <h4>Samuel Namotte</h4>
-                            <p>Basse incarnant la profondeur et la richesse du répertoire baroque</p>
-                        </div>
-                        <div class="artist-card">
-                            <h4>Xavier Haag</h4>
-                            <p>Chef de chœur et directeur artistique de Terpsichore, passionné par la musique baroque</p>
-                        </div>
+                <h3>Les Artistes</h3>
+                <div class="artists-list">
+                    <div class="artist-card">
+                        <h4>Ensemble Chrysalis</h4>
+                        <p>Formation musicale baroque mettant en avant les textures riches de la musique de la Renaissance tardive et du Baroque précoce</p>
+                    </div>
+                    <div class="artist-card">
+                        <h4>Mathilde Sevrin</h4>
+                        <p>Soprano accompagnant le répertoire baroque avec une voix cristalline et expressive</p>
+                    </div>
+                    <div class="artist-card">
+                        <h4>Samuel Namotte</h4>
+                        <p>Basse incarnant la profondeur et la richesse du répertoire baroque</p>
+                    </div>
+                    <div class="artist-card">
+                        <h4>Choeur Terpsichore</h4>
+                        <p>Ensemble choral dirigé par Xavier Haag, spécialisé dans le répertoire baroque</p>
                     </div>
                 </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h3>Réservez Votre Place</h3>
+                <p>Vivez cette expérience musicale unique en trois actes!</p>
+                <a href="https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=MUBAFA&s=130C5DA4-AC0D-4C17-3EBA-45B48F33A28C" class="btn">Réserver Maintenant</a>
             </section>
         </div>
     </main>
@@ -590,11 +515,11 @@
                 </p>
             </div>
             <div>
-                <h4>Concerts</h4>
+                <h4>Lieu</h4>
                 <p>
-                    <a href="marloie.html">Marloie</a><br>
-                    <a href="evere.html">Evere</a><br>
-                    <a href="malonne.html">Malonne</a>
+                    Chapelle Saint-Berthuin<br>
+                    Fond de Malonne 129<br>
+                    5020 Malonne
                 </p>
             </div>
             <div>
